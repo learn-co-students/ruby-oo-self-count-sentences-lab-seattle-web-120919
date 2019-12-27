@@ -18,8 +18,9 @@ class String
   end
 
   def count_sentences #use self keyword 
-    #binding.pry
-    self.split(/\.|\?|\!/).delete_if {|w| w.size < 2}.size
-  
+    split_variable = self.split(/\.|\?|\!/)
+    # binding.pry
+    new_array = split_variable.delete_if { |word| word.size < 3 }
+    new_array.size
   end
 end 
